@@ -6,7 +6,199 @@
 <head>
     <title>CoSign</title>
     <style>
-        
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+        }
+
+        .black-box {
+            background-color: black;
+            max-width: 800px;
+            max-height: 500px;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto; /* Add this line to center the black box */
+        }
+
+        .dynamic-size {
+            resize: both;
+            overflow: auto;
+        }
+
+        .content-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ccc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .navbar {
+            background-color: #5b52bc;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: #ffb3a8;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px;
+            flex-grow: 1;
+        }
+
+        .content-section1 {
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .content-section2 {
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .content-section {
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .info-section {
+            background-color: #d2afff;
+            color: white;
+            padding: 20px;
+        }
+
+        .info-section h2{
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            color: #ff8675;
+        }
+
+        .info-section p{
+            
+            font-size: 14px;
+            color: #ffb3a8;
+        }
+
+        .content-section1 {
+            min-height: 425px;
+            
+            
+        }
+        .content-section2 {
+            min-height: 425px;
+            
+            
+        }
+        .content-section {
+            min-height: 650px;
+        }
+
+        .content-section1 h2 {
+            margin-left: 70px;
+            margin-top: 50px;
+            
+        }
+
+        .content-section1 p{
+            margin-left: 70px;
+            margin-top: 10px;
+        }
+
+        .content-section2 h2 {
+            margin-left: 70px;
+            margin-top: 50px;
+            
+        }
+
+        .content-section2 p{
+            margin-left: 70px;
+            margin-top: 10px;
+        }
+
+        .info-section {
+            min-height: 400px;
+        }
+
+        .chat-section {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+
+        .content-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .chat-box {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            display: none;
+        }
+
+        .chat-box h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+        }
+
+
+        .info-section {
+            background-color: #5b52bc
+            ;
+            color: white;
+            padding: 20px;
+        }
+
+        .chat-section {
+            transition: transform 0.5s;
+        }
+
+        .chat-section.rotated {
+            transform: rotate(360deg);
+        }
+
+        .chat-box {
+            transition: transform 1s;
+        }
+
+        .chat-box.open {
+            transform: translateY(-400px);
+        }
+
+
+        .info-section {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .info-section div {
+            flex-basis: 30%;
+        }
         .content-section1 {
             background-image: url("section1.avif");
             background-repeat: no-repeat;
